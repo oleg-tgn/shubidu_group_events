@@ -1,14 +1,9 @@
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-
-  var hiddenText = document.getElementsByClassName("js-header-info-scroll")[0].getBoundingClientRect();
-  console.log(window.pageYOffset);
-  var btn = document.getElementsByClassName("download-event")[0];
-  var pos = 290 - window.pageYOffset;
-  console.log(pos);
-  if (pos > 150)
-    document.getElementsByClassName("download-event")[0].style.top = pos + 'px'; 
-
-  prevScrollpos = currentScrollPos;
-}
+window.addEventListener('scroll', function() {
+    var posBtn = 290 - window.pageYOffset;
+    var posBorder = 313 - window.pageYOffset;
+  
+    if (posBtn > 150) {
+      document.getElementsByClassName("download-event")[0].style.top = posBtn + 'px'; 
+      document.getElementsByClassName("js-header-events-border")[0].style.top = posBorder + 'px'; 
+    }
+});

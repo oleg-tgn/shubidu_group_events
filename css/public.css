@@ -541,7 +541,6 @@ a {
     box-sizing: border-box;
     padding: 0 0 40px;
     background: #fff;
-    border-bottom: 1px solid #ccc;
     padding-top: 120px;
 }
 
@@ -626,6 +625,17 @@ a {
     line-height: 22px;
     margin: 0;
     padding-right: 15px;
+}
+
+.header-events-border {
+    position: fixed;
+    box-sizing: border-box;
+    box-shadow: none;
+    height: 0;
+    border: 1px solid #ccc;
+    top: 313px;
+    width: 370px;
+    height: 0;
 }
 
 .page {
