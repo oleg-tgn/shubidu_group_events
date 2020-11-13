@@ -541,12 +541,19 @@ a {
 
 
 /*Working Checkbox*/
+.checkbox-working {
+    float: right;
+}
+
+.event-title-description {
+    width: calc(100% - 91px - 40px);
+}
+
 .checkbox {
     user-select: none;
     margin: 0 auto;
     padding: 0;
     position: relative;
-    left: 82px;
     top: 25px;
 }
 
@@ -576,8 +583,13 @@ a {
     color: #fff;
     position: absolute;
     font-size: 20px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
 }
 
+.checkbox input:checked + .options:hover:after {
+    background-color: transparent;
+}
+  
 
 /* top */
 .events-decription {
