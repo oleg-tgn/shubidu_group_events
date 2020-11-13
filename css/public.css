@@ -9,7 +9,12 @@
 @font-face {
     font-family: "Futura";
     font-weight: 400;
-    src: url("../fonts/Futura.ttc");
+    src: url("../fonts/futura_medium.ttf");
+}
+
+@font-face {
+    font-family: "Futura - Bold";
+    src: url("../fonts/futura_bold.ttf");
 }
 
 body {
@@ -101,15 +106,21 @@ a {
 }
 
 .date-month-line {
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
     background-color: black;
     padding: 8px 16px;
+    width: calc(100% - 10px);
+    box-sizing: border-box;
+
+    color: #fff;
+    font-family: "Futura - Bold";
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: left;
     text-transform: uppercase;
-    width: 87%;
 }
 
 .right {
@@ -124,7 +135,7 @@ a {
 .date-day {
     text-align: center;
     width: 40px;
-    padding: 8px 24px;
+    padding: 18px 24px;
     border-right: 2px solid #eaeaea;
     position: relative;
     /*top: 5px;*/
@@ -132,13 +143,21 @@ a {
 }
 
 .date-day .month-day {
+    color: #000;
+    font-family: "Futura - Bold";
     font-size: 28px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .date-day .day-of-week {
     font-size: 14px;
     text-transform: uppercase;
+
+    color: #000;
+    font-family: "Futura";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 .white-bg {
@@ -197,26 +216,32 @@ a {
     background: #fff;
     display: flex;
     border: 2px solid #eaeaea;
-    padding: 14px 0px;
-    margin-bottom: 16px;
-    margin-top: 16px;
-    margin-left: 16px;
-    margin-right: 16px;
+    padding: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 12px;
     /*box-shadow: 3px 3px 12px #33333317;*/
 }
 
 .event-title .title {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 8px 0px;
+    padding: 18px 0px 8px;
     word-break: break-word;
     margin-left: 16px;
+
+    color: #000;
+    font-family: "Futura - Bold";
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .text {
     margin-left: 16px;
-    color: #8e8e8e;
+    color: #8c8c8c;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .checkbox-style {
@@ -522,12 +547,12 @@ a {
     padding: 0;
     position: relative;
     left: 82px;
-    top: 14px;
+    top: 25px;
 }
 
 .checkbox .options {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     display: inline-block;
     border: 2px solid #03bed8;
     border-radius: 50%; 
@@ -542,10 +567,14 @@ a {
 }
 
 .checkbox input:checked + .options::after {
-    content: '\2714';
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;    
+    background: url(../img/check.svg) no-repeat center;
+    background-size: 12px;
     color: #fff;
-    position: relative;
-    margin: 0px 7px;
+    position: absolute;
     font-size: 20px;
 }
 
@@ -556,7 +585,7 @@ a {
     box-sizing: border-box;
     padding: 7px 15px 15px;
     background: #fff;
-    margin-top: 89px;
+    margin-top: 75px;
 }
 
 @media (max-width: 449px) {
@@ -565,9 +594,9 @@ a {
     }
 }
 
-.events-title {
+.events-heading {
     vertical-align: middle;
-    padding: 15px 15px 0;
+    padding: 15px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -577,75 +606,92 @@ a {
 }
 
 @media screen and (min-width: 450px) {
-    .events-title {
+    .events-heading {
         top: 62px;
         width: 370px;
     } 
 }
 
-.events-title-img-wrap {
+.events-heading-img-wrap {
     display: inline-block;
-    width: 70px;
-    height: 70px;
     overflow: hidden;
     border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.events-title-image {
+.events-heading-image {
     min-width: 100%;
     height: 100%;
 }
 
-.events-title-text {
+.events-heading-text {
     display: inline-block;
     padding-left: 10px;
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 70px;
+    line-height: 56px;
     vertical-align: top;
+
+    color: #000;
+    font-family: "Futura - Bold";
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .events-decription-icon-wrap {
     display: inline-block;
-    width: 70px;
+    width: 56px;
     margin-right: 10px;
     text-align: center;
     vertical-align: middle;
+    font-size: 0;
 }
 
-.header-events-info {
+.events-decription-info {
     display: block;
     margin-top: 15px;
     vertical-align: middle;
 }
 
-.header-events-info-icon {
+.events-decription-info-icon {
     width: 12px;
     vertical-align: middle;
     line-height: 22px;
 }
 
-.header-events-info-address {
+.events-decription-info-address {
     display: inline-block;
     vertical-align: sub;
     margin: 0;
+
+    color: #000000;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
     line-height: 22px;
 }
 
-.header-events-info-icon-more {
+.events-decription-disclosure-icon {
+    margin-left: 15px;
+}
+
+.events-decription-info-icon-more {
     display: inline-block;
     width: 7px;
     vertical-align: sub;
     margin-left: 10px;
 }
 
-.header-events-info-description {
+.events-decription-info-description {
     display: inline-block;
-    width: calc(100% - 100px);
+    width: calc(100% - 75px);
     vertical-align: middle;
+    color: #000000;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 17px;
     line-height: 22px;
     margin: 0;
-    padding-right: 15px;
 }
 
 .page {
@@ -685,16 +731,25 @@ a {
 
 .download-event {    
     display: block;    
-    margin: -30px auto 0;
-    width: 300px;
-    padding: 20px 0;
+    margin: -25px auto 0;
+    width: 340px;
+    height: 48px;
+    box-sizing: border-box;
+    line-height: 48px;
+    max-width: calc(100% - 30px);
     background-color: #ffe338;
     border: 0;
     border-radius: 54px;
-    text-transform: uppercase;
-    font-size: 14px;
     user-select: none;
-    font-weight: 800;
+
+
+    color: #000;
+    font-family: "Futura - Bold";
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 @media (max-width: 414px) {
