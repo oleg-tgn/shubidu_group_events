@@ -41,7 +41,7 @@ a {
     background-color: #f5f5f5;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 768px) and (min-height: 768px) {
     .mobile-toolbar, .md-show {
         display: block !important;
     }
@@ -67,7 +67,7 @@ a {
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) and (min-height: 768px) {
     .lg-show {
         display: block !important;
     }
@@ -169,7 +169,7 @@ a {
     display: none;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 768px) and (min-height: 768px) {
     .mobile-toolbar-link {
         display: block;
         width: 406px;
@@ -296,6 +296,15 @@ a {
     justify-content: center;
     margin-bottom: 20px;
     margin-top: 20px;
+}
+
+.buttons-line-image-wrap {
+    width: 140px;
+    max-width: calc(50% - 20px);
+}
+
+.buttons-line-image {
+    width: 100%;
 }
 
 .buttons-line div {
@@ -543,18 +552,21 @@ a {
 /*Working Checkbox*/
 .checkbox-working {
     float: right;
+    position: relative;
 }
 
 .event-title-description {
-    width: calc(100% - 91px - 40px);
+    width: calc(100% - 140px);
 }
 
 .checkbox {
     user-select: none;
     margin: 0 auto;
     padding: 0;
-    position: relative;
-    top: 25px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
 }
 
 .checkbox .options {
@@ -563,10 +575,23 @@ a {
     display: inline-block;
     border: 2px solid #03bed8;
     border-radius: 50%; 
+    /*hide shadow on iphone*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+    -webkit-tap-highlight-color:transparent;
 }
 
 .checkbox input[type="checkbox"] {
     display: none;
+    /*hide shadow on iphone*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    -webkit-tap-highlight-color:transparent;
 }
 
 .checkbox input:checked + .options {
@@ -582,8 +607,7 @@ a {
     background-size: 12px;
     color: #fff;
     position: absolute;
-    font-size: 20px;
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+    font-size: 20px;    
 }
 
 .checkbox input:checked + .options:hover:after {
@@ -617,7 +641,7 @@ a {
     z-index: 10;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 768px) and (min-height: 768px) {
     .events-heading {
         top: 62px;
         width: 370px;
@@ -710,7 +734,7 @@ a {
     position: relative;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 768px) and (min-height: 768px) {
     .page {
         padding-top: 62px;
         padding-bottom: 97px;
@@ -724,7 +748,7 @@ a {
     z-index: 20;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 768px) and (min-height: 768px) {
     .download-event-wrap {
         top: 150px;
     }    
