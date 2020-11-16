@@ -91,6 +91,9 @@ select {
 body {
     margin: 0;
     font-family: "SF Text", sans-serif;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
     /*reset shadow on ios*/
     -webkit-appearance: none;
     -moz-appearance: none;
