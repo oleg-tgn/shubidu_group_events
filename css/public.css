@@ -17,6 +17,77 @@
     src: url("../fonts/futura_bold.ttf");
 }
 
+/*reset styles*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*end reset styles*/
+
 body {
     margin: 0;
     font-family: "SF Text", sans-serif;
@@ -65,7 +136,7 @@ a {
     }
 
     .container {
-        width: 370px;
+        width: 406px;
         margin: 0 auto;
         justify-content: center;
     }
@@ -137,7 +208,7 @@ a {
 
 .date-day {
     text-align: center;
-    width: 40px;
+    width: 88px;
     padding: 18px 24px;
     border-right: 2px solid #eaeaea;
     position: relative;
@@ -283,8 +354,8 @@ a {
 .download {
     background-color: white;
     border-radius: 10px;
-    margin: 100px 15px 40px;
-    padding: 5px;
+    margin: 40px 15px 40px;
+    padding: 0;
     border: 2px solid #eaeaea;
 }
 
@@ -293,6 +364,7 @@ a {
     font-size: 13px;
     line-height: 18px;
     padding: 0px 15px;
+    margin: 15px 0;
 }
 
 .buttons-line {
@@ -611,6 +683,8 @@ a {
     background-size: 12px;
     color: #fff;
     position: absolute;
+    top: 0;
+    left: 0;
     font-size: 20px;    
 }
 
@@ -679,6 +753,10 @@ a {
     font-weight: 700;
 }
 
+.events-decription-icon {
+    display: inline;
+}
+
 .events-decription-icon-wrap {
     display: inline-block;
     width: 56px;
@@ -713,6 +791,7 @@ a {
 }
 
 .events-decription-disclosure-icon {
+    display: inline;
     margin-left: 15px;
 }
 
