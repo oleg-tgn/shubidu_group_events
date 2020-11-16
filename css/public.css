@@ -20,7 +20,10 @@
 body {
     margin: 0;
     font-family: "SF Text", sans-serif;
-
+    /*reset shadow on ios*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 a {
