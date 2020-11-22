@@ -287,9 +287,10 @@ a {
 
 
 /** Event page */
-.event-title {
+.event-item {
     background: #fff;
     display: flex;
+    justify-content: row;
     border: 2px solid #eaeaea;
     min-height: 88px;
     padding: 0;
@@ -301,11 +302,7 @@ a {
     /*box-shadow: 3px 3px 12px #33333317;*/
 }
 
-.event-title-description {
-    padding: 10px 16px;
-}
-
-.event-title .title {
+.event-item .title {
     display: inline-flex;
     align-items: flex-end;
     vertical-align: bottom;
@@ -631,12 +628,15 @@ a {
 
 /*Working Checkbox*/
 .checkbox-working {
-    float: right;
+    display: flex;
+    justify-content: center;
+    width: 50px;    
     position: relative;
 }
 
-.event-title-description {
+.event-item-description {
     width: calc(100% - 130px);
+    padding: 10px 0 10px 16px;
 }
 
 .checkbox {
