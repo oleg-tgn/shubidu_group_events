@@ -294,10 +294,7 @@ a {
     border: 2px solid #eaeaea;
     min-height: 88px;
     padding: 0;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 10px;
     border-radius: 12px;
     /*box-shadow: 3px 3px 12px #33333317;*/
 }
@@ -378,18 +375,14 @@ a {
 }
 
 .buttons-line-image-wrap {
-    width: 140px;
+    width: 148px;
     max-width: calc(50% - 20px);
+    margin: 0 10px;
 }
 
 .buttons-line-image {
     width: 100%;
 }
-
-.buttons-line div {
-    padding: 0 10px;
-}
-
 
 .btn {
     padding: 20px 80px;
@@ -889,4 +882,29 @@ a {
     .download-event {
         top: 90px;
     }
+}
+
+
+.footer-banner {
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #fff;
+    border: 2px solid #eaeaea;
+    min-height: 88px;
+    padding: 0;
+    margin: 40px 10px;    
+    border-radius: 12px;    
+    font-size: 13px;
+}
+
+.footer-banner-info {
+    background: #01b8d4;
+    padding: 15px;
+    color: #fff;
+}
+
+.footer-banner-info-bottom {    
+    padding: 15px;
 }
