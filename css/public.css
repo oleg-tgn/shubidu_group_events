@@ -203,11 +203,14 @@ a {
 
 
 .date-day {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 88px;
     padding: 8px 24px;
+    text-align: center;
     border-right: 2px solid #eaeaea;
-    /*top: 5px;*/
     font-family: sans-serif;
 }
 
@@ -288,7 +291,7 @@ a {
     background: #fff;
     display: flex;
     border: 2px solid #eaeaea;
-    height: 88px;
+    min-height: 88px;
     padding: 0;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -298,21 +301,23 @@ a {
     /*box-shadow: 3px 3px 12px #33333317;*/
 }
 
+.event-title-description {
+    padding: 10px 16px;
+}
+
 .event-title .title {
     display: inline-flex;
     align-items: flex-end;
     vertical-align: bottom;
-    padding: 24px 0px 7px;
+    padding: 14px 0px 7px;
     word-break: break-word;
-    margin-left: 16px;
     color: #000;
     font-size: 18px;
     line-height: 18px;
     font-weight: 700;
 }
 
-.text {
-    margin-left: 16px;
+.text {    
     color: #8c8c8c;
     font-size: 14px;
     line-height: 19px;
@@ -694,6 +699,9 @@ a {
 
 /* top */
 .events-decription {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     width: 100%;
     box-sizing: border-box;
     padding: 7px 15px 15px;
@@ -708,6 +716,9 @@ a {
 }
 
 .events-heading {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     vertical-align: middle;
     padding: 15px;
     position: fixed;
@@ -740,11 +751,14 @@ a {
     height: 100%;
 }
 
-.events-heading-text {
-    display: inline-block;
+.events-heading-text {    
+    display: flex;
+    width: calc(100% - 56px);
+    height: 56px;
     padding-left: 10px;
-    line-height: 56px;
-    vertical-align: top;
+    line-height: 1;
+    vertical-align: middle;
+    align-items: center;
 
     color: #000;
     font-size: 24px;
@@ -765,7 +779,8 @@ a {
 }
 
 .events-decription-info {
-    display: block;
+    display: flex;
+    flex-direction: row;
     margin-top: 15px;
     vertical-align: middle;
 }
@@ -777,7 +792,8 @@ a {
 }
 
 .events-decription-info-address {
-    display: inline-block;
+    display: flex;
+    width: calc(100% - 66px);
     vertical-align: sub;
     margin: 0;
 
@@ -825,7 +841,7 @@ a {
     display: block;
     position: -webkit-sticky;
     position: sticky;
-    top: 88px;
+    top: 86px;
     z-index: 20;
     margin-bottom: 30px;
 }
