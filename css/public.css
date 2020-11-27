@@ -128,6 +128,7 @@ a {
 
     body {
         background-image: url("../img/bg.png");
+        background-attachment: fixed;
     }
 
     .container {
