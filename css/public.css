@@ -133,8 +133,7 @@ a {
 
     .container {
         width: 406px;
-        margin: 0 auto;
-        justify-content: center;
+        margin: 0 auto;        
     }
 }
 
@@ -250,7 +249,7 @@ a {
         display: block;
         width: 406px;
         min-height: 62px;
-        background: #fff;
+        background: none;
         z-index: 10;
         position: fixed;
         top: 0;
@@ -260,7 +259,7 @@ a {
         display: block;
         width: 406px;
         min-height: 62px;
-        background: #fff;
+        background: none;
         z-index: 10;
         position: fixed;
         bottom: 0;
@@ -827,12 +826,16 @@ a {
 
 .page {
     position: relative;
+    height: 100vh;
+    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 @media screen and (min-width: 768px) and (min-height: 768px) {
     .page {
-        padding-top: 62px;
-        padding-bottom: 97px;
+        margin-top: 62px;
+        padding-bottom: 0;
+        height: calc(100vh - 159px);
     }
 }
 
@@ -843,12 +846,6 @@ a {
     top: 86px;
     z-index: 20;
     margin-bottom: 30px;
-}
-
-@media screen and (min-width: 768px) and (min-height: 768px) {
-    .download-event-wrap {
-        top: 150px;
-    }    
 }
 
 .download-event-border {
