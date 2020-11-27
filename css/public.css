@@ -299,6 +299,12 @@ a {
     /*box-shadow: 3px 3px 12px #33333317;*/
 }
 
+.event-item-link {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 50px);
+}
+
 .event-item .title {
     display: inline-flex;
     align-items: flex-end;
@@ -628,7 +634,6 @@ a {
 }
 
 .event-item-description {
-    width: calc(100% - 130px);
     padding: 10px 0 10px 16px;
 }
 
