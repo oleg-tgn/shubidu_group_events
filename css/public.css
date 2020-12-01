@@ -647,9 +647,8 @@ a {
     flex-direction: row;
     width: 100%;
     box-sizing: border-box;
-    padding: 7px 15px 15px;
+    padding: 0 15px 15px;
     background: #fff;
-    margin-top: 75px;
 }
 
 @media (max-width: 449px) {
@@ -664,19 +663,13 @@ a {
     flex-direction: row;
     vertical-align: middle;
     padding: 15px;
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
     top: 0;
     width: 100%;
     box-sizing: border-box;
     background: #fff;
     z-index: 10;
-}
-
-@media screen and (min-width: 768px) and (min-height: 768px) {
-    .events-heading {
-        top: 62px;
-        width: 370px;
-    } 
 }
 
 .events-heading-img-wrap {
