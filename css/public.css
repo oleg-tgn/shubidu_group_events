@@ -685,7 +685,7 @@ a {
 .events-heading-text {    
     display: flex;
     width: calc(100% - 56px);
-    height: 56px;
+    min-height: 56px;
     padding-left: 10px;
     line-height: 1;
     vertical-align: middle;
