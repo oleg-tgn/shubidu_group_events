@@ -44,7 +44,7 @@ a {
 }
 
 .container {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -194,20 +194,13 @@ a {
         display: block;
         width: 406px;
         min-height: 62px;
-        background: none;
-        z-index: 10;
-        position: fixed;
-        top: 0;
     }
 
     .mobile-toolbar-link-bottom {
         display: block;
         width: 406px;
-        min-height: 62px;
-        background: none;
+        min-height: 62px; 
         z-index: 10;
-        position: fixed;
-        bottom: 0;
     }
 }
 
@@ -771,7 +764,6 @@ a {
 
 @media screen and (min-width: 768px) and (min-height: 768px) {
     .page {
-        margin-top: 62px;
         padding-bottom: 0;
         height: calc(100vh - 159px);
     }
