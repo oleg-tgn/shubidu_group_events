@@ -574,6 +574,8 @@ a {
 }
 
 .event-item-description {
+    /*width bug for IE11*/
+    width: calc(100% - 88px);
     padding: 10px 0 10px 16px;
 }
 
@@ -583,7 +585,8 @@ a {
     padding: 0;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 0;
 }
 
