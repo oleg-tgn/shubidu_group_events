@@ -660,6 +660,7 @@ a {
     flex-wrap: wrap;
     flex-direction: row;
     vertical-align: middle;
+    align-items: center;
     padding: 15px;
     position: -webkit-sticky;
     position: sticky;
@@ -686,9 +687,12 @@ a {
 }
 
 .events-heading-text {    
-    display: flex;
+	display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
     width: calc(100% - 56px);
-    min-height: 56px;
     padding-left: 10px;
     line-height: 1;
     vertical-align: middle;
