@@ -762,6 +762,14 @@ a {
     font-size: 17px;
     line-height: 22px;
     margin: 0;
+
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
 }
 
 .page {
