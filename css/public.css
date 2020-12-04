@@ -859,3 +859,22 @@ a {
 .footer-banner-image {
     align-self: center;
 }
+
+/*change sticky on fixed for IE11*/
+.events-heading-ie-fixed {
+    position: fixed;
+    top: 62px;
+    width: 370px;
+}
+
+.page-ie-fixed {
+    padding-top: 86px;
+}
+
+.download-event-wrap-ie-fixed {
+    position: fixed;
+    width: 370px;
+    top: 148px;
+}
+
+/*end IE11 fix*/

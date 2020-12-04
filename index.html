@@ -208,5 +208,33 @@
                 <div class="mobile-footer"></div>
             </a>
         </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        function isInternetExplorer() {
+            return window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
+        }
+
+        if(isInternetExplorer()) {
+            document.getElementsByClassName('events-heading')[0].className += " events-heading-ie-fixed";
+            
+
+            const download = document.getElementsByClassName('download-event-wrap')[0];
+
+            const page = document.getElementsByClassName('page')[0];
+            page.className += " page-ie-fixed"; 
+            
+            page.addEventListener('scroll', function() {
+                if (page.scrollTop > 108) {
+                    download.className += " download-event-wrap-ie-fixed";                                     
+                } else {
+                    download.className = "download-event-wrap";                    
+                }
+            });
+
+        }
+    });    
+    
+</script>
     </body>
 </html>
